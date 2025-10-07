@@ -21,7 +21,7 @@ recommendedAddon.require();
 
 The packet can either be sent via the `LabyModPlayer` object of the player, or directly via the `LabyModProtocol`.
 
-If you're not sending the packet with an integrated handler, you need to register a handler for the `AddonRecommendationResponsePacket` yourself. The process is explained [here](/pages/server/protocols/#registering-handlers).
+If you're not sending the packet with an integrated handler, you need to register a handler for the `AddonRecommendationResponsePacket` yourself. The process is explained [here](../../protocols.md#registering-handlers).
 
 ### Via LabyModPlayer (Recommended)
 

@@ -4,7 +4,7 @@ The `TabListBannerPacket` is a client-bound packet that allows servers to add a 
 
     The aspect ratio of the image must be `5:1` and the recommended resolution is `1280x256` pixels.
 
-![TabList Banner](/assets/files/serverapi/tablist-banner.png)
+![TabList Banner](../../../../assets/files/serverapi/tablist-banner.png)
 
 ## Sending the Packet
 

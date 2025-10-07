@@ -12,7 +12,7 @@ at the beginning, as all new things are.
 
 ???+ warning "Important Note"
 
-    Please keep in mind that the examples on this page are version dependent. We are showing the examples for Minecraft 1.19.1, so depending on the date you're reading this, recreating the examples might not be possible, we'll try to keep them updated, though, and if we do, we update the version in this note.
+    Please keep in mind that the examples on this page are version dependent. We are showing the examples for Minecraft 1.21.5, so depending on the date you're reading this, recreating the examples might not be possible, we'll try to keep them updated, though, and if we do, we update the version in this note.
 
 ## Access the Minecraft Code "the Normal Way"
 You should only use this method for things you can access without using Reflections, as using Reflections can have a
@@ -21,10 +21,13 @@ high impact on the performance of the players that use your addon.
 The use case we will implement in the following example will show how to display messages in the player's chat. We have
 already implemented this, but it is relatively easy to show and understand.
 
-We will first create a new interface in our `core`- or `api` module called `ExampleChatExecutor`, annotate it with the `@Referenceable` annotation and declare a new
-method `void displayMessageInChat(String)`. Now we head to the module of the version we want and create a new class
-called `VersionedExampleChatExecutor` in our desired package. If there is no folder called `src` in the module, you'll
-need to create the following folder structure inside the module: `src/main/java/`.
+First, create a new interface (an abstract class would also work) in the `core` or `api` module and name it `ExampleChatExecutor`. Annotate it with `@Referenceable`, and define a method:
+
+```java
+void displayMessageInChat(String message);
+```
+
+Next, navigate to the `game-runner` module. Locate the version you want to implement this functionality for, and create a new class named `VersionedExampleChatExecutor` in the appropriate package.
 
 Now to the implementation. First, we implement the interface `ExampleChatExecutor`, and now the most important part: we
 need to add the annotation `Implement` to the class and declare `ExampleChatExecutor.class` as the argument. This will
@@ -49,10 +52,10 @@ Those are the results from this example:
     ```java
     @Referenceable
     public interface ExampleChatExecutor {
-    
+
       void displayMessageInChat(String message);
-    
-      void displayMessageInChat(Component adventureComponent);
+
+      void displayMessageInChat(Component labyComponent);
     }
     ```
 
@@ -61,20 +64,20 @@ Those are the results from this example:
     @Singleton
     @Implements(ExampleChatExecutor.class)
     public class VersionedExampleChatExecutor implements ExampleChatExecutor {
-    
+
       @Override
       public void displayMessageInChat(String message) {
         Component component = Component.literal(message);
         this.addMessageToChat(component);
       }
-    
+
       @Override
-      public void displayMessageInChat(net.kyori.adventure.text.Component adventureComponent) {
+      public void displayMessageInChat(net.labymod.api.client.component.Component labyComponent) {
         ComponentMapper componentMapper = Laby.labyAPI().minecraft().componentMapper();
-        Component component = (Component) componentMapper.toMinecraftComponent(adventureComponent);
+        Component component = (Component) componentMapper.toMinecraftComponent(labyComponent);
         Minecraft.getInstance().gui.getChat().addMessage(component);
       }
-    
+
       private void addMessageToChat(Component component) {
         Minecraft.getInstance().gui.getChat().addMessage(component);
       }
@@ -84,12 +87,13 @@ Those are the results from this example:
 === ":octicons-file-code-16: ExampleAddon"
     ```java
     public class ExampleAddon extends LabyAddon<ExampleConfiguration> {
-    
+
       private ExampleChatExecutor chatExecutor;
 
       @Override
       protected void enable() {
-        chatExecutor = ((DefaultReferenceStorage) this.referenceStorageAccessor()).exampleChatExecutor();
+        # Make sure to build your addon first (after creating the interface and it's implementations) and to import your own generated ReferenceStorage class
+        this.chatExecutor = ((ReferenceStorage) this.referenceStorageAccessor()).exampleChatExecutor();
 
         this.registerCommand(new ExamplePingCommand(this));
       }
@@ -100,29 +104,29 @@ Those are the results from this example:
       }
 
       public ExampleChatExecutor chatExecutor() {
-        return chatExecutor;
+        return this.chatExecutor;
       }
     ```
 
 === ":octicons-file-code-16: ExamplePingCommand"
     ```java
     public class ExamplePingCommand extends Command {
-    
+
       private final ExampleChatExecutor chatExecutor;
 
       public ExamplePingCommand(ExampleAddon addon) {
         super("ping", "pong");
-        chatExecutor = addon.chatExecutor();
+        this.chatExecutor = addon.chatExecutor();
       }
-    
+
       @Override
       public boolean execute(String prefix, String[] arguments) {
         if (prefix.equalsIgnoreCase("ping")) {
           this.displayMessage(Component.text("Ping!", NamedTextColor.AQUA));
           return false;
         }
-    
-        chatExecutor.displayMessageInChat(Component.text("Pong!", NamedTextColor.GOLD));
+
+        this.chatExecutor.displayMessageInChat(Component.text("Pong!", NamedTextColor.GOLD));
         return true;
       }
     }
@@ -130,12 +134,42 @@ Those are the results from this example:
 
 ## Access the Minecraft Code via Mixin
 
-???+ error "Important Note"
+!!! warning "Important Note"
+    The moment your addon uses Mixins, it requires a full game restart when downloaded via the addon store.
 
-    Please keep in mind that the moment your addon uses Mixins, it requires a restart when downloaded via the addon store.
+!!! danger
+    For mixins to work outside of the development environment, your `rootProject.name` in `settings.gradle.kts` must exactly match your addon namespace.
 
-todo: write
+Mixins allow you to modify Minecraft code directly. Similar to reference storage, they are version-dependent, which means you must implement them separately for each Minecraft version you want to support.
 
-## Inheriting Version Dependent Code
+When creating a mixin, the **location** is critical. Navigate to the `game-runner` module of your addon and create a package named `mixins` inside the automatically generated versioned package. Your structure should look something like this:
 
-todo: write
+```
+org/example/{version}/mixins
+```
+
+You may create mixins in this package or in subpackages. You do **not** need to register them manually in a configuration file - LabyMod will automatically detect and apply them. LabyMod also supports [MixinExtras](https://github.com/LlamaLad7/MixinExtras) annotations, which can simplify common injection patterns.
+
+For further reading:
+
+* [SpongePowered Mixin Documentation](https://github.com/SpongePowered/Mixin/wiki)
+* [MixinExtras Wiki](https://github.com/LlamaLad7/MixinExtras/wiki)
+
+This section does not attempt to explain all of Mixin in detail - it focuses only on how to correctly load and use them with LabyMod.
+
+### Example: Logging Every Tick
+
+=== ":octicons-file-code-16: org.example.v1_21_5.mixins.MixinMinecraft"
+    ```java
+    @Mixin(Minecraft.class)
+    public class MixinMinecraft {
+
+      @Unique
+      private int example$tickCount = 0;
+
+      @Inject(method = "tick", at = @At("HEAD"))
+      private void onTick(CallbackInfo ci) {
+          System.out.println("[Mixin] Tick log " + this.example$tickCount++);
+      }
+    }
+    ```

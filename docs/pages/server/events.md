@@ -4,7 +4,7 @@ are fired by the API:
 ## LabyModPlayerJoinEvent
 
 The `LabyModPlayerJoinEvent` is fired after a player has sent
-the [VersionLoginPacket](/pages/server/labymod/moderation/labymod-version/) to the server.
+the [VersionLoginPacket](labymod/moderation/labymod-version.md) to the server.
 
 ???+ danger "Important Note"
 

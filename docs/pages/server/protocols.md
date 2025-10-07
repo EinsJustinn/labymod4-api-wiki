@@ -7,12 +7,12 @@ The LabyMod 4 Server API provides the LabyMod Protocol that is used to communica
 The LabyMod Protocol is the default protocol, it contains all official features that servers can use to customize the
 experience of LabyMod players.
 
-A collection of all available features can be found [here](/pages/server/labymod/overview).
+A collection of all available features can be found [here](labymod/overview.md).
 
 ### Registering Handlers
 
 To register a packet handler in the LabyMod Protocol, you first need to create a new class implementing the
-`PacketHandler` interface. We'll use the [VersionLoginPacket](/pages/server/labymod/moderation/labymod-version/) in the
+`PacketHandler` interface. We'll use the [VersionLoginPacket](labymod/moderation/labymod-version.md) in the
 following example.
 
 ```java
@@ -68,7 +68,7 @@ protocolService.registry().registerProtocol(protocol);
 
 ### Register a Packet
 
-To register a packet, you first need to [create a Packet](/pages/server/packets/). After doing that, you can just
+To register a packet, you first need to [create a Packet](packets.md). After doing that, you can just
 register the packet in the protocol.
 
 === ":octicons-code-16: With Handler"

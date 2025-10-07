@@ -32,7 +32,7 @@ The `ChatReceiveEvent` is fired when a message is registered to be shown in chat
 
 The `GameTickEvent` is fired twice every tick. Once with the phase `PRE` and once with the phase `POST`. The phase represents the current state of a tick. If it has the phase `PRE`, it is fired before Minecraft registers the tick to all its different handlers; if it's the `POST` phase, it is fired after Minecraft itself handled the tick. A tick represents 50 milliseconds (20 ticks per second).
 
-### Json Config Loader Initialize Event
+### JSON Config Loader Initialize Event
 
 The `JsonConfigLoaderInitializeEvent` is fired when the configuration loader is initialized. This Event is used to create your own type adapters for your configuration.
 
@@ -225,7 +225,7 @@ For this example, we only need a simple class that does not contain any fields. 
     ```
 Now we need to fire the event so that all registered listeners can be notified. We will do this by hooking into the Minecraft code for each version and calling `Laby.fireEvent(new AdvancementReceiveEvent())` every time the player receives a new advancement.
 
-You can find more information about how to hook into Minecraft methods <a href="/pages/addon/features/version-dependent/#access-the-minecraft-code-via-mixin">here</a>.
+You can find more information about how to hook into Minecraft methods [here](version-dependent.md#access-the-minecraft-code-via-mixin).
 
 The last thing to do is to create our listener class called `AdvancementReceivedListener` which will listen for our `AdvancementReceiveEvent` and play a sound for the client every time the event is fired.
 The `AdvancementReceivedListener` needs a method annotated with `@Subscribe` and our `AdvancementReceiveEvent` class as parameters. In this method, we can simply call `Laby.labyAPI().minecraft().sounds().playButtonPress()` to play a sound for the client every time our event is fired.

@@ -8,9 +8,9 @@ While it is only necessary to publicly share your addon until we reviewed it, it
 
 If you want to upload your addon to your own GitLab instance, write an email to <a href="mailto:info@labymod.net" target="_blank">info@labymod.net</a>.
 
-## Publish
+## Publishing to the Addon Store
 
-We use <a href="https://flintmc.net" target="_blank">FlintMC</a> as the back end (and web view) for our addon store. There may be some bugs because it's in early development, so create a bug report on <a href="https://labymod.net/ideas#category=webbugs">our Idea platform</a> if you find any.
+We use <a href="https://flintmc.net" target="_blank">FlintMC</a> as the back end (and web view) for our addon store. If you find any bugs, you can create a bug report on <a href="https://labymod.net/ideas#category=webbugs">our Idea platform</a>.
 
 ## Version Compatibility
 
@@ -27,7 +27,7 @@ Version `1.8.9` indicates compatibility with just Minecraft 1.8.9 and thus no ot
 
 ### Version Range
 
-A version range is a range of versions supported. Contains <a href="#the-star">The Star</a> and <a href="#single-version">Single Version</a>. <br>
+A version range is a range of versions supported. Contains [The Star](#the-star) and [Single Version](#single-version). <br>
 A few examples: 
 
 + `1.17<1.19.2` - every version between 1.17.0 and 1.19.2 is supported - Everything below 1.17.0 (for example 1.16.5) or higher than 1.19.2 (for example 1.19.3) isn't.
@@ -35,6 +35,6 @@ A few examples:
 
 ### Multi Version Range
 
-A multi-version range is a combination of <a href="#version-range">Version Ranges</a> and <a href="#single-version">Single Versions</a>. This is mostly used to guarantee a good experience when supporting multiple versions that have one or more major releases in between.
+A multi-version range is a combination of [Version Ranges](#version-range) and [Single Versions](#single-version). This is mostly used to guarantee a good experience when supporting multiple versions that have one or more major releases in between.
 Example: <br>
-`1.8.9,1.12.2,1.16.5<1.19.2` - this supports Minecraft 1.8.9, 1.12.2 and everything in between (and including) 1.16.5 and 1.19.2. Minecraft 1.19-1.12.1, 1.13-1.16.4 and everything higher than (and including) 1.19.3 would not be supported.
+`1.8.9,1.12.2,1.16.5<1.19.2` - this supports Minecraft 1.8.9, 1.12.2 and everything in between (and including) 1.16.5 and 1.19.2. Minecraft 1.9-1.12.1, 1.13-1.16.4 and everything higher than (and including) 1.19.3 would not be supported.

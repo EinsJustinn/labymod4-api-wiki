@@ -182,7 +182,4 @@ public void read(@NotNull PayloadReader reader) {
 ## Final Words
 
 That's it. You've successfully created a packet that can be sent the to or from the server. 
-Now all you have to do is to [register the Packet](/pages/server/protocols/#register-a-packet) in your Protocol. <br/>
-
-
-
+Now all you have to do is to [register the Packet](protocols.md#register-a-packet) in your Protocol.

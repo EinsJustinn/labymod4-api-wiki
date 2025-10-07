@@ -39,7 +39,7 @@ As mentioned above **ALL** packets related to installed addons **RELY** on this 
 The `LabyModPlayer` object provides the `#installedAddons` method to get the installed addons of the player at any time. Check `InstalledAddonsResponse#hasResponse` before handling it though, to ensure that the data is valid.
 
 ???+ warning "Note"
-    Using the `LabyModPlayer` for this process is recommended as it keeps track of the installed and enabled addons for you. If you're not using the `LabyModPlayer`, you need to keep track of the installed (and enabled/disabled) addons yourself by [handling the server-bound packets](/pages/server/protocols/#registering-handlers).
+    Using the `LabyModPlayer` for this process is recommended as it keeps track of the installed and enabled addons for you. If you're not using the `LabyModPlayer`, you need to keep track of the installed (and enabled/disabled) addons yourself by [handling the server-bound packets](../../protocols.md#registering-handlers).
 
 === ":octicons-file-code-16: Specific Addons"
 

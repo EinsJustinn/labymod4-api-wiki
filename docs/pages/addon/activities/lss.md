@@ -4,7 +4,7 @@ We have implemented LSS as a system to design and theme responsive GUIs (Screens
 ## LSS in a Nutshell
 
 The main thing you need to know about LSS is that while you add LSS StyleSheets to your Activity, you can't manipulate Activities directly, only the Widgets inside of that Activity. 
-A list of all Widgets delivered with the API can be found <a href="#FINAL-LINK-HERE">here</a>.
+A list of all Widgets delivered with the API can be found [here](widgets.md#all-widgets).
 
 CSS and LSS have very similar syntax, but here are some of their differences:
 
@@ -15,7 +15,7 @@ CSS and LSS have very similar syntax, but here are some of their differences:
 
 ## Creating Activities with LSS
 
-Looking back at <a href="#FINAL-LINK-HERE">the last page</a>, we created an Activity with a ComponentWidget but without LSS. 
+Looking back at [the last page](custom-widgets.md), we created an Activity with a ComponentWidget but without LSS. 
 We'll again use the last page's result to make it work with LSS.
 
 We start by deleting the `postStyleSheetLoad` method, which we used before to set the position of our Widget. 
@@ -75,7 +75,7 @@ Like before, this is what the code we described above would look like:
     ```
 
 === ":octicons-file-media-24: Result"
-    ![Config-Result](/assets/files/screenshots/lss-activity-example.png)
+    ![Config-Result](../../../assets/files/screenshots/lss-activity-example.png)
  
 
 ## Injecting Blocks Into Other StyleSheets

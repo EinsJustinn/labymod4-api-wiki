@@ -12,7 +12,7 @@ The method will return the key if the translation key cannot be found in any int
 Now, if you want to check if the translation key can be found easily, you call `I18n.getTranslation` with the translation key and possibly arguments. 
 The method will return `null` if the key cannot be found.
 
-As already mentioned, you can internationalize every text the user can see, even the widgets of our Activity system that display text. A list of all widgets delivered with our Addon API can be found <a href="/pages/addon/activities/widgets/#all-widgets">here</a>. 
+As already mentioned, you can internationalize every text the user can see, even the widgets of our Activity system that display text. A list of all widgets delivered with our Addon API can be found [here](../activities/widgets.md#all-widgets). 
 
 ## Support Multiple Languages
 

@@ -49,7 +49,7 @@ labyModProtocol.sendPacket(uniqueId, new AddMarkerPacket(
 
 ## Receiving Markers
 
-To receive markers sent by players, you first need to set the marker send type to `SERVER` as described above. Then you can create a `PacketHandler` for the `ClientAddMarkerPacket` to receive the markers. Registering a `PacketHandler` is described [here](/pages/server/protocols/#registering-handlers).
+To receive markers sent by players, you first need to set the marker send type to `SERVER` as described above. Then you can create a `PacketHandler` for the `ClientAddMarkerPacket` to receive the markers. Registering a `PacketHandler` is described [here](../../protocols.md#registering-handlers).
 
 To keep the example platform-independent, we removed the import for `LabyModProtocolService`. Make sure to import the class in your implementation.
 

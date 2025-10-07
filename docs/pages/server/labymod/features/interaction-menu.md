@@ -1,6 +1,6 @@
 The `InteractionMenuPacket` is a client-bound packet that allows servers to add custom interaction menu entries.
 
-![Example Interaction Menu Entry](/assets/files/serverapi/interaction-menu.png)
+![Example Interaction Menu Entry](../../../../assets/files/serverapi/interaction-menu.png)
 
 ## Creating an Interaction Menu Entry
 

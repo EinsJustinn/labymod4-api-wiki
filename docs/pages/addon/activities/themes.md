@@ -35,7 +35,7 @@ simply taken from its parent.
 Besides any other file in your `assets/<my namespace>` folder there are also theme files located
 in `assets/<my namespace>/themes/<theme>` with the following structure:
 
-![Theme-File-Tree](/assets/files/screenshots/theme-file-structure.png)
+![Theme-File-Tree](../../../assets/files/screenshots/theme-file-structure.png)
 
 Usually you don't need to access these files directly because LabyMod handles it for stuff like LSS stylesheets,
 icons in the settings and hud widgets. If you still need to access a ThemeFile, it works like this:
@@ -49,7 +49,7 @@ public ResourceLocation getThemeResource() {
 
 ## Implement an existing theme in your addon
 
-Coming from [Understand LSS](/pages/addon/activities/lss) you already know how to create LSS stylesheets for the
+Coming from [Understand LSS](lss.md) you already know how to create LSS stylesheets for the
 vanilla theme by putting them in `assets/example/themes/vanilla/lss/`. When implementing the fancy theme, you now want
 to put your new LSS stylesheets in `assets/example/themes/fancy/lss/` and name them exactly the same.
 

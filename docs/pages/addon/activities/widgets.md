@@ -2,7 +2,7 @@ Widgets are a valuable and easy way to customize your Activities and are the bac
 
 ## Use Widgets in Activities
 
-This part will show you how to use and integrate Widgets into your Activity. Looking back at our bare Activity example, we rendered the text `"I am a bare rendered example text"`, so we'll be using a ComponentWidget just this time with the text `"I am an example text rendered with a ComponentWidget"`. We're building onto the code from the previous example so if you haven't already gone through it, we recommend taking a look at it <a href="/pages/addon/activities/activity/">here</a>.
+This part will show you how to use and integrate Widgets into your Activity. Looking back at our bare Activity example, we rendered the text `"I am a bare rendered example text"`, so we'll be using a ComponentWidget just this time with the text `"I am an example text rendered with a ComponentWidget"`. We're building onto the code from the previous example so if you haven't already gone through it, we recommend taking a look at it [here](activity.md).
 
 ???+ warning "Important Note"
 
@@ -56,13 +56,13 @@ Like with the bare Activity, this is what the code we described above would look
     ```
 
 === ":octicons-file-media-24: Result"
-    ![Config-Result](/assets/files/screenshots/widget-activity-example.png)
+    ![Activity-Result](../../../assets/files/screenshots/widget-activity-example.png)
 
 ## All Widgets
 
 Below listed are all Widgets for use. They can be extended and modified for a more specific use case. <br>
 
-Every Widget also has the LSS Properties from <a href="#abstract-widget">`AbstractWidget`</a>
+Every Widget also has the LSS Properties from [`AbstractWidget`](#abstract-widget)
 
 ???+ warning "Important Note"
 
@@ -78,8 +78,8 @@ The `ButtonWidget` is an Input-Widget that performs a specific action (set with 
 It can be created with a String with `ButtonWidget.text` and a Component with `ButtonWidget.component`. <br>
 The Widget has the following LSS properties: 
 
-  + Everything from <a href="#FINAL-LINK-HERE">`HorizontalListWidget`</a> (because the Button can have an Icon)
-  + icon 
+  + Everything from [`HorizontalListWidget`](#horizontal-list) (because the Button can have an Icon)
+  + icon
 
 #### Check Box
 
@@ -107,13 +107,13 @@ The Widget has no own LSS properties.
 The `KeybindWidget` is an Input-Widget that allows the user to set a specific Key. 
 It also accepts mouse buttons when expressly set with `acceptMouseButtons(Boolean)`.
 It can be created via its constructor. <br>
-The Widget has the same LSS properties as <a href="#text-field">`TextFieldWidget`</a>.
+The Widget has the same LSS properties as [`TextFieldWidget`](#text-field).
 
 #### Multi Keybind
 
 The `MultiKeybindWidget` is an Input-Widget that allows users to set multiple keys simultaneously. 
 It can be created via its constructor. <br>
-The Widget has the same LSS properties as <a href="#text-field">`TextFieldWidget`</a>.
+The Widget has the same LSS properties as [`TextFieldWidget`](#text-field).
 
 #### Slider
 

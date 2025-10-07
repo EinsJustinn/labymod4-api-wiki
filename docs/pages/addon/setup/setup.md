@@ -63,12 +63,11 @@ Now navigate to the class `ExampleConfiguration`. You'll see that this class inh
 Looking at the class body, you will find a field called `enabled` with the `SwitchSetting` annotation. 
 The annotation declares the Widget that you'll find in your settings. In this case, the Widget is a SwitchSettingWidget, which toggles a boolean between on and off.
 
-You can find more about configurations <a href="/pages/addon/features/config/">here</a>.
+You can find more about configurations [here](../features/config.md).
 
 ### The Listener
 
-Looking into the package `org.example.core.listener`, you'll find the class ExampleGameTickListener; it does what it says. It listens to the GameTickListener event. You can find a complete guide to our events 
-<a href="/pages/addon/features/events/">here</a>.
+Looking into the package `org.example.core.listener`, you'll find the class ExampleGameTickListener; it does what it says. It listens to the GameTickListener event. You can find a complete guide to our events [here](../features/events.md).
 
 First, we declared a field with our addon main class as type. Then we created a constructor with our main class instance as a parameter.
 
@@ -77,7 +76,7 @@ Inside the event, we access the field with our addon main instance; with this in
 
 ### The Command
 
-With the LabyMod 4 API, you can add your own commands with a simple-to-use command system. More on how to create own commands <a href="/pages/addon/features/commands/">here</a>.
+With the LabyMod 4 API, you can add your own commands with a simple-to-use command system. More on how to create own commands [here](../features/commands.md).
 
 What we do in this class is as simple and basic as the command system in general. We are inheriting the class `Command`, creating the constructor of our class, and calling the constructor of the superclass with the main prefix of the command (in our case, `ping`) and the aliases (in this case, just `pong`).
 
@@ -87,7 +86,6 @@ FINISH AFTER THE COMMAND SYSTEM IS FINISHED
 
 ### The Internationalization File
 
-Go to the module called `core` and then navigate down to `src/main/resources/assets/example/i18n/` (the `example` folder has to be named after the namespace you set in your `build.gradle.kts`) and you should see a file with the name `en_us.json`. This is the default file for internationalization, as English is the default language. To dive deeper in the internationalization of LabyMod go to <a href="/pages/addon/features/internationalization/">this article</a>.
+Go to the module called `core` and then navigate down to `src/main/resources/assets/example/i18n/` (the `example` folder has to be named after the namespace you set in your `build.gradle.kts`) and you should see a file with the name `en_us.json`. This is the default file for internationalization, as English is the default language. To dive deeper in the internationalization of LabyMod go to [this article](../features/internationalization.md).
 
-First, we created a new JSON Object called `settings`, which implies that the following lines are for the settings; after that, we created another Json Object called `example`, this has to reflect the namespace that you set in your `build.gradle.kts`. In said Json Object we declared a String with the key `name`; this ends up being the name of the Addon, which you'll see on the category button linking to the settings of your Addon in the LabyMod Settings. Now we created another JSON Object with the key `enabled`, as this is the name of the field in our configuration; you will find another String with the key `name`. This is the name of the Setting Widget `enabled`.
- 
+First, we created a new JSON Object called `example`, this has to reflect the namespace that you set in your `build.gradle.kts`; after that, we created another JSON Object called `settings`, which implies that the following lines are for the settings. Now we created another JSON Object with the key `enabled`, as this is the name of the field in our configuration; you will find another String with the key `name`. This is the name of the Setting Widget `enabled`.

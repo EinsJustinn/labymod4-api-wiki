@@ -177,4 +177,4 @@ you can do it in the Activity.
     ```
 
 === ":octicons-file-media-24: Result"
-    ![Custom-Widget-Result](/assets/files/screenshots/lss-custom-widget-example.png)
+    ![Custom-Widget-Result](../../../assets/files/screenshots/lss-custom-widget-example.png)

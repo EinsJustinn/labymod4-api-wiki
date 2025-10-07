@@ -2,7 +2,7 @@ The `InputPromptPacket` is a client-bound packet that opens a prompt for the pla
 
 The client will then respond with a `InputPromptResponsePacket` that contains the player's input.
 
-![Example Input Prompt](/assets/files/serverapi/input-prompt.png)
+![Example Input Prompt](../../../../assets/files/serverapi/input-prompt.png)
 
 ## Creating an Input Prompt
 
@@ -39,7 +39,7 @@ The InputPrompt model uses the Server API's own Component model.
 
 The packet can either be sent via the `LabyModPlayer` object of the player, or directly via the `LabyModProtocol`.
 
-If you're not sending the packet with an integrated handler, you need to register a handler for the `ServerSwitchPromptResponsePacket` yourself. The process is explained [here](/pages/server/protocols/#registering-handlers).
+If you're not sending the packet with an integrated handler, you need to register a handler for the `ServerSwitchPromptResponsePacket` yourself. The process is explained [here](../../protocols.md#registering-handlers).
 
 ### Via LabyModPlayer (Recommended)
 

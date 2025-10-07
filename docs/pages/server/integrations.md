@@ -45,7 +45,7 @@ public class ExampleIntegration implements LabyModProtocolIntegration {
 
 While not required if you are using the Integration by calling `LabyModProtocolService#getOrRegisterIntegration` (
 because the integration would be registered if not already), it is recommended to register the Integration as a service
-to automate the registering this process.
+to automate this process.
 
 #### Registering via AutoService
 
@@ -93,4 +93,4 @@ class name) of your integration class.
 ### Creating a Protocol
 
 To create a custom protocol, you can create a new instance of `AddonProtocol` in the `initialize` method of your integration. <br/>
-Take a look at [Create a Custom Protocol](/pages/server/protocols/#create-a-custom-protocol) or the [official VoiceChat integration on GitHub](https://github.com/LabyMod/labymod4-server-api-integrations/blob/master/voicechat/src/main/java/net/labymod/serverapi/integration/voicechat/VoiceChatIntegration.java) for an example.
+Take a look at [Create a Custom Protocol](protocols.md#create-a-custom-protocol) or the [official VoiceChat integration on GitHub](https://github.com/LabyMod/labymod4-server-api-integrations/blob/master/voicechat/src/main/java/net/labymod/serverapi/integration/voicechat/VoiceChatIntegration.java) for an example.

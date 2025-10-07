@@ -9,8 +9,8 @@ nav:
       - Introduction: index.md
       - Contributors: contributors.md
       - Documentation:
-         - Server API: /pages/server
-         - Addon API: /pages/addon
+         - Server API: pages/server/index.md
+         - Addon API: pages/addon/index.md
   - Server API:
       - Server API Setup: pages/server/index.md
       - Working with Protocols: pages/server/protocols.md
@@ -46,7 +46,7 @@ nav:
               - Mute Players: pages/server/addons/voicechat/mute.md
               - Unmute a Player: pages/server/addons/voicechat/unmute.md
               - Open Channels: pages/server/addons/voicechat/open-channels.md
-      - Contributors: /contributors
+      - Contributors: contributors.md
   - Addon API:
       - Addon API Introduction: pages/addon/index.md
       - Setup:
@@ -71,7 +71,7 @@ nav:
           - Publish Your Addon: pages/addon/publishing/publish.md
       - Troubleshoot: pages/addon/troubleshoot.md
       - Additional Information: pages/addon/additional-infos.md
-      - Contributors: /contributors
+      - Contributors: contributors.md
 
 plugins:
   - search
@@ -83,8 +83,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
 
 theme:
   name: material
@@ -93,8 +93,6 @@ theme:
   logo: 'assets/theme/images/wolf.png'
   palette:
     scheme: slate
-  feature:
-    tabs: true
   features:
     - navigation.sections
     - navigation.tabs
@@ -104,7 +102,6 @@ theme:
     - navigation.footer
     - search.highlight
 
-extra_javascript: [ 'assets/theme/js/script.js' ]
 extra_css: [ 'assets/theme/css/main.css' ]
 
 extra:

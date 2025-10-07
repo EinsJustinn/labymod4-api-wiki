@@ -3,7 +3,7 @@ recommends switching to another server. The player can then confirm or cancel th
 
 The client will then respond with a `ServerSwitchPromptResponsePacket` that contains the player's decision.
 
-![Example Server Switch Prompt](/assets/files/serverapi/server-switch-prompt.png)
+![Example Server Switch Prompt](../../../../assets/files/serverapi/server-switch-prompt.png)
 
 ## Creating an Input Prompt
 
@@ -23,7 +23,7 @@ ServerSwitchPrompt serverSwitchPrompt = ServerSwitchPrompt.create(
 
 The packet can either be sent via the `LabyModPlayer` object of the player, or directly via the `LabyModProtocol`.
 
-If you're not sending the packet with an integrated handler, you need to register a handler for the `ServerSwitchPromptResponsePacket` yourself. The process is explained [here](/pages/server/protocols/#registering-handlers).
+If you're not sending the packet with an integrated handler, you need to register a handler for the `ServerSwitchPromptResponsePacket` yourself. The process is explained [here](../../protocols.md#registering-handlers).
 
 ### Via LabyModPlayer (Recommended)
 

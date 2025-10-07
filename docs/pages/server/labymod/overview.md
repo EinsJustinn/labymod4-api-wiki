@@ -2,31 +2,31 @@ The following features are currently available in the LabyMod Protocol:
 
 ## Server Displays
 
-- [Economy Displays](/pages/server/labymod/displays/economy)
-- [Subtitles](/pages/server/labymod/displays/subtitles)
-- [TabList Server Banner](/pages/server/labymod/displays/tablist-banner)
-- [TabList Country Flags](/pages/server/labymod/displays/tablist-flags)
+- [Economy Displays](displays/economy.md)
+- [Subtitles](displays/subtitles.md)
+- [TabList Server Banner](displays/tablist-banner.md)
+- [TabList Country Flags](displays/tablist-flags.md)
 
 ## Features
 
-- [Discord Rich Presence](/pages/server/labymod/features/discord)
-- [Emote API](/pages/server/labymod/features/emotes)
-- [Playing Game Mode](/pages/server/labymod/features/gamemode)
-- [Interaction Menu Entries](/pages/server/labymod/features/interaction-menu)
-- [Markers](/pages/server/labymod/features/markers)
+- [Discord Rich Presence](features/discord.md)
+- [Emote API](features/emotes.md)
+- [Playing Game Mode](features/gamemode.md)
+- [Interaction Menu Entries](features/interaction-menu.md)
+- [Markers](features/markers.md)
 
 ## Moderation
 
-- [Addon Recommendations](/pages/server/labymod/moderation/addon-recommendation)
-- [Get the Installed Addons](/pages/server/labymod/moderation/installed-addons)
-- [Disable Addons](/pages/server/labymod/moderation/disable-addons)
-- [Get the LabyMod Version](/pages/server/labymod/moderation/labymod-version)
-- [Permissions](/pages/server/labymod/moderation/permissions)
+- [Addon Recommendations](moderation/addon-recommendation.md)
+- [Get the Installed Addons](moderation/installed-addons.md)
+- [Disable Addons](moderation/disable-addons.md)
+- [Get the LabyMod Version](moderation/labymod-version.md)
+- [Permissions](moderation/permissions.md)
 
 ## Supplements
 
-- [Input Prompts](/pages/server/labymod/supplements/input-prompt)
-- [Server Switch Prompts](/pages/server/labymod/supplements/server-switch)
+- [Input Prompts](supplements/input-prompt.md)
+- [Server Switch Prompts](supplements/server-switch.md)
 
 ## Planned Features
 

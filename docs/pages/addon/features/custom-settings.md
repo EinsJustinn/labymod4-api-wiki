@@ -1,7 +1,7 @@
-Additionally to the predefined setting types discussed [in the last page](/pages/addon/features/config), you can also
+Additionally to the predefined setting types discussed [in the last page](config.md), you can also
 create your own types to create more complex settings like the VoiceChat.
 
-![VoiceChat-Microphone](/assets/files/screenshots/voicechat-microphone-example.png)
+![VoiceChat-Microphone](../../../assets/files/screenshots/voicechat-microphone-example.png)
 
 In this example we will create a custom setting widget with a Dropdown and a Button, possible use cases for this may
 include a list with some kind of values and a refresh button to refresh the values. The selected value shall be
@@ -132,4 +132,4 @@ stored in the config.
     ```
 
 === ":octicons-file-media-24: Result"
-    ![Custom-Settings-Result](/assets/files/screenshots/custom-settings-example.png)
+    ![Custom-Settings-Result](../../../assets/files/screenshots/custom-settings-example.png)

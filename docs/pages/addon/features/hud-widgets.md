@@ -44,7 +44,7 @@ LabyMod provides different Widget types that help you to easily create HudWidget
 
 + TextHudWidget - a simple text widget that supports multiple lines
 + ItemHudWidget - an item widget with that you can display an image with a text next to it
-+ SimpleHudWidget - a widget that render custom icons/text etc. - an example can be found in the <a href="https://github.com/labymod-addons/teamspeak/blob/master/core/src/main/java/net/labymod/addons/teamspeak/core/hud/TeamSpeakHudWidget.java">Teamspeak LabyMod Addon</a>
++ SimpleHudWidget - a widget that render custom icons/text etc. - an example can be found in the <a href="https://github.com/labymod-addons/teamspeak/blob/master/core/src/main/java/net/labymod/addons/teamspeak/core/hud/TeamSpeakHudWidget.java" target="_blank">Teamspeak LabyMod Addon</a>
 
   
 # Example TextHudWidget
@@ -94,7 +94,7 @@ public class ExampleHudWidget extends TextHudWidget<TextHudWidgetConfig> {
 
 You can also create Configurations for your Hud Widgets, in our example we are using a configuration for the TextHudWidget.
 You can easily create configurations by creating a class that inherit the `TextHudWidgetConfig` class.
-You can use the same Setting Elements that you are using to create the configuration of your addon, take a look <a href="/pages/addon/features/config/#using-predefined-setting-widgets">here</a>.
+You can use the same Setting Elements that you are using to create the configuration of your addon, take a look [here](config.md#using-predefined-setting-widgets).
 
 ```java
 

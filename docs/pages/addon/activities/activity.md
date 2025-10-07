@@ -3,7 +3,7 @@ Only if you want to display something truly custom, knowing OpenGL could be bene
 
 In the following pages, we will explain how to create custom activities, create and use widgets in your Activities, and theme them with LSS. It can be a bit much to take in at first, but it's worth it.
 
-Examples are shown on every page; you will find a link to the section with the example on every page within the first paragraphs. Click <a href="#bare-activity-example">here</a> to see the first example.
+Examples are shown on every page; you will find a link to the section with the example on every page within the first paragraphs. Click [here](#bare-activity-result) to see the first example.
 
 ???+ warning "Important Note"
 
@@ -50,4 +50,4 @@ Looking back at what we just wrote, this is what the code and result would look 
     ```
 
 === ":octicons-file-media-24: Result"
-    ![Config-Result](/assets/files/screenshots/bare-activity-example.png)
+    ![Config-Result](../../../assets/files/screenshots/bare-activity-example.png)
