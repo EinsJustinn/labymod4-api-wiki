@@ -2,7 +2,17 @@ The `UpdateLabyModUserIndicatorVisibilityPacket` is a client-bound packet that a
 
 ## Sending the Packet
 
-The packet can be sent via the `LabyModProtocol`.
+The packet can either be sent via the `LabyModPlayer` object of the player, or directly via the `LabyModProtocol`.
+
+### Via the LabyModPlayer (Recommended)
+
+```java
+// Get the LabyModPlayer
+LabyModPlayer player = LabyModProtocolService.get().getPlayer(uniqueId);
+        
+// Update the Indicator Visibility
+player.updateLabyModUserIndicatorVisibility(false);
+```
 
 ### Via the LabyModProtocol
 

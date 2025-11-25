@@ -5,11 +5,37 @@ The `ServerBadgePacket` is a client-bound packet that allows servers to display 
 
 ## Set the Badge Infos
 
-The packet can be sent via the `LabyModProtocol`.
+???+ danger "Important Note"
 
-### Via the LabyModProtocol
+    You must first send the Badge Infos before the badges can be displayed next to the players.
+
+The packet can either be sent via the `LabyModPlayer` object of the player, or directly via the `LabyModProtocol`.
 
 You can send one or more server badge info to the player.
+
+### Via the LabyModPlayer  (Recommended)
+
+```java
+// Get the LabyModPlayer
+LabyModPlayer player = LabyModProtocolService.get().getPlayer(uniqueId);
+
+// Create a new ServerBadge
+ServerBadge owner = ServerBadge.create(
+        1, // The ID of the badge
+        new Color(255, 0, 0), // The color of the badge
+        "https://example.com/image_owner.png" // The URL of the badge image
+);
+ServerBadge developer = ServerBadge.create(
+        2, // The ID of the badge
+        new Color(0, 0, 255), // The color of the badge
+        "https://example.com/image_developer.png" // The URL of the badge image
+);
+
+// Register the badges
+player.registerBadges(List.of(owner, developer));
+```
+
+### Via the LabyModProtocol
 
 ```java
 // Get the LabyModProtocol
@@ -33,14 +59,31 @@ labyModProtocol.sendPacket(uniqueId, new ServerBadgePacket(owner, developer));
 
 ## Set the badges for the players.
 
-The packet can be sent via the `LabyModProtocol`.
+The packet can either be sent via the `LabyModPlayer` object of the player, or directly via the `LabyModProtocol`.
+
+### Via the LabyModPlayer (Recommended)
+
+```java
+// Get the LabyModPlayer
+LabyModPlayer player = LabyModProtocolService.get().getPlayer(uniqueId);
+
+// Create a new ServerBadge
+ServerBadge owner = ServerBadge.create(
+        1, // The ID of the badge
+        new Color(255, 0, 0), // The color of the badge
+        "https://example.com/image_owner.png" // The URL of the badge image
+);
+ServerBadge developer = ServerBadge.create(
+        2, // The ID of the badge
+        new Color(0, 0, 255), // The color of the badge
+        "https://example.com/image_developer.png" // The URL of the badge image
+);
+
+// Bind the badges
+player.bindBadges(List.of(serverUserBadge));
+```
 
 ### Via the LabyModProtocol
-
-???+ danger "Important Note"
-
-    You must first send the ServerBadgePacket before the badges can be displayed next to the players.
-
 
 Now you can assign the badge to a player, which will then be displayed.
 
