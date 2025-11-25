@@ -53,7 +53,7 @@ ServerBadge developer = ServerBadge.create(
         "https://example.com/image_developer.png" // The URL of the badge image
 );
 
-// Sent the packet
+// Send the packet
 labyModProtocol.sendPacket(uniqueId, new ServerBadgePacket(owner, developer));
 ```
 
@@ -97,6 +97,6 @@ ServerUserBadge serverUserBadge = ServerUserBadge.create(
         1 // The ID of the badge
 );
 
-// Sent the packets
+// Send the packets
 labyModProtocol.sendPacket(uniqueId, new ServerUserBadgePacket(serverUserBadge));
 ```

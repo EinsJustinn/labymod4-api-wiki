@@ -20,6 +20,6 @@ player.updateLabyModUserIndicatorVisibility(false);
 // Get the LabyModProtocol
 LabyModProtocol labyModProtocol = LabyModProtocolService.get().labyModProtocol();
 
-// Sent the packet
+// Send the packet
 labyModProtocol.sendPacket(uniqueId, new UpdateLabyModUserIndicatorVisibilityPacket(false));
 ```
